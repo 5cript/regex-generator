@@ -1,0 +1,19 @@
+@import "../bootstrap.scss";
+
+#EditorFrame {
+  overflow: auto;
+  padding: 0;
+  display: flex;
+  cursor: row-resize;
+  background-color: $border-color;
+  min-height: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+#Editor {
+  width: 100%;
+  background-color: $body-bg;
+  cursor: default;
+  height: calc(100% - 5px);
+}

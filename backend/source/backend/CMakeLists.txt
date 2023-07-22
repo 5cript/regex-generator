@@ -1,4 +1,10 @@
-target_sources(${PROJECT_NAME} PRIVATE main.cpp)	
+target_sources(
+    ${PROJECT_NAME} 
+    PRIVATE 
+        main.cpp
+)	
+
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "regex_builder")
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/backend/include)
 

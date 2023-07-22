@@ -1,9 +1,27 @@
-target_sources(${PROJECT_NAME} PRIVATE main.cpp main_page.cpp)
+target_sources(
+    ${PROJECT_NAME} 
+    PRIVATE 
+        main.cpp 
+        components/main_content.cpp
+        components/main_page.cpp
+        components/sidebar.cpp
+        components/topbar.cpp
+        components/bottom_panel.cpp
+)
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/frontend/include)
+target_include_directories(
+    ${PROJECT_NAME} 
+    PRIVATE 
+        ${CMAKE_SOURCE_DIR}/frontend/include
+)
 
 # Link frontend of nui inside of emscripten
-target_link_libraries(${PROJECT_NAME} PRIVATE nui-frontend)
+target_link_libraries(
+    ${PROJECT_NAME} 
+    PRIVATE 
+        nui-frontend
+        nlohmann_json
+)
 
 nui_prepare_emscripten_target(
     TARGET
@@ -14,11 +32,11 @@ nui_prepare_emscripten_target(
         ${PREJS_FILE}
     EMSCRIPTEN_LINK_OPTIONS
         -sEXPORTED_FUNCTIONS=_frontendMain
-        -O2
+        # -O2
         -sALLOW_MEMORY_GROWTH=1 
-        # -g
+        -g
         # or other options, see emscripten docs.
     EMSCRIPTEN_COMPILE_OPTIONS
-        -O3
-        # -g
+        # -O3
+        -g
 )

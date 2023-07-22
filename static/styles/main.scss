@@ -1,0 +1,18 @@
+@import "./bootstrap.scss";
+@import "./components/bottom_panel.scss";
+@import "./components/editor.scss";
+@import "./components/main_page.scss";
+@import "./components/sidebar.scss";
+@import "./components/topbar.scss";
+@import "./components/main_content.scss";
+
+body {
+  background-color: $body-bg;
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+}
+
+* {
+  user-select: none;
+}

@@ -1,0 +1,14 @@
+@import "../bootstrap.scss";
+
+#MainPage {
+  background-color: $body-bg;
+  display: grid;
+  grid-template-columns: max-content 1.6fr;
+  grid-template-rows: 50px 2.1fr;
+  gap: 0px 0px;
+  height: 100%;
+
+  grid-template-areas:
+    "Topbar Topbar"
+    "Sidebar MainContent";
+}

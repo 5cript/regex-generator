@@ -1,0 +1,9 @@
+@import "../bootstrap.scss";
+
+#MainContent {
+  grid-area: MainContent;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}

@@ -1,0 +1,7 @@
+@import "../bootstrap.scss";
+
+#Topbar {
+  grid-area: Topbar;
+  height: 50px;
+  background-color: $darker-bg;
+}

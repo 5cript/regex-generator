@@ -1,0 +1,32 @@
+$body-bg: #303030;
+$body-color: #ddd;
+$border-radius: 0px;
+$form-check-input-bg: #aaa;
+$border-color: #444;
+
+$primary: #10a710;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+$gap: 5px;
+$darker-bg: darken($body-bg, 5%);
+$much-darker-bg: darken($body-bg, 15%);
+$primary-darker: darken($primary, 15%);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
