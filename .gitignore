@@ -6,3 +6,4 @@ _build
 out
 CMakeSettings.json
 node_modules
+dependencies/Nui

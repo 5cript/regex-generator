@@ -1,16 +1,18 @@
 cmake_minimum_required(VERSION 3.21)
 
-project(nui-template VERSION 0.1.0)
+project(regex-builder VERSION 0.1.0)
 
-# Nui Dependency
-include (${CMAKE_CURRENT_LIST_DIR}/_cmake/dependencies/nui.cmake)
 include (${CMAKE_CURRENT_LIST_DIR}/_cmake/common_options.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/dependencies/Nui/cmake/dependencies/nlohmann_json.cmake)
 
 # Add executable (sources are added later, depending on frontend/backend)
 add_executable(${PROJECT_NAME})
 set_common_options(${PROJECT_NAME})
 
 set(PREJS_FILE ${CMAKE_SOURCE_DIR}/frontend/source/frontend/js/module.js)
+
+# Add dependencies (checked out)
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/dependencies/nui)
 
 if (EMSCRIPTEN)  
     add_subdirectory(${CMAKE_SOURCE_DIR}/frontend/source/frontend)
