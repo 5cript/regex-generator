@@ -27,7 +27,8 @@ nui_prepare_emscripten_target(
     TARGET
         ${PROJECT_NAME}
     PARCEL_ARGS
-        # --no-optimize
+        --no-optimize
+        # --dist-dir=${CMAKE_BINARY_DIR}/../bin
     PREJS
         ${PREJS_FILE}
     EMSCRIPTEN_LINK_OPTIONS

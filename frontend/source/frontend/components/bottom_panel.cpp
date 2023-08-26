@@ -28,7 +28,8 @@ namespace RegexGenerator
         using Nui::Elements::div; // because of the global div.
 
         // clang-format off
-        return div{id = "BottomPanel"}(       
+        return div{id = "BottomPanel", reference.onMaterialize([](Nui::val element){
+        })}(       
         );
         // clang-format on
     }

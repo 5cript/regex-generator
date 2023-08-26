@@ -12,6 +12,7 @@ set_common_options(${PROJECT_NAME})
 set(PREJS_FILE ${CMAKE_SOURCE_DIR}/frontend/source/frontend/js/module.js)
 
 # Add dependencies (checked out)
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/dependencies/webview)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/dependencies/nui)
 
 if (EMSCRIPTEN)  

@@ -4,6 +4,7 @@
 #include <frontend/json.hpp>
 
 #include <nui/frontend/utility/stabilize.hpp>
+#include <nui/frontend/extensions/make_resizeable.hpp>
 #include <nui/frontend/elements.hpp>
 #include <nui/frontend/attributes.hpp>
 
@@ -35,14 +36,11 @@ namespace RegexGenerator
         // clang-format off
         return div{id = "MainContent"}(
             div{id = "EditorFrame", reference.onMaterialize([](Nui::val element){
-                Nui::val::global("makeResizeable")(element, Nui::val{5}, Nui::val{"bottom"});
+                //Nui::makeResizeable(element, Nui::ResizeableEdge::Bottom);
             })}(
                 stabilize(impl_->editor, div{id = "Editor", reference.onMaterialize([](Nui::val element){
-                    Nui::val::global("createMonacoEditor")(element, js({
-                        {"value", "function x() {\n  console.log(\"Hello world!\");\n}"},
-                        {"language", "javascript"},
-                        {"theme", "vs-dark"}
-                    }));
+                    Nui::Console::log(Nui::val::global("createMonacoEditor"));
+                    Nui::val::global("createMonacoEditor")(element);
                 })}())
             ),
             impl_->bottomPanel.render()

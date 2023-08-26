@@ -2,6 +2,7 @@
 
 #include <nui/frontend/elements.hpp>
 #include <nui/frontend/attributes.hpp>
+#include <nui/frontend/extensions/make_resizeable.hpp>
 
 namespace RegexGenerator
 {
@@ -29,7 +30,7 @@ namespace RegexGenerator
 
         // clang-format off
         return div{id = "Sidebar", reference.onMaterialize([](Nui::val const& val){
-            Nui::val::global("makeResizeable")(val, Nui::val{5});
+            Nui::makeResizeable(val, Nui::ResizeableEdge::Right);
         })}(
             // Sidebar content div, necessary for the resizeable bar to work.
             div{id = "SidebarContent"}("Sidebar")            
