@@ -12,12 +12,12 @@ set_common_options(${PROJECT_NAME})
 set(PREJS_FILE ${CMAKE_SOURCE_DIR}/frontend/source/frontend/js/module.js)
 
 # Add dependencies (checked out)
-add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/dependencies/webview)
-add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/dependencies/nui)
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/dependencies/Nui)
 
 if (EMSCRIPTEN)  
     add_subdirectory(${CMAKE_SOURCE_DIR}/frontend/source/frontend)
 else()
+    add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/dependencies/webview)
 	add_subdirectory(${CMAKE_SOURCE_DIR}/backend/source/backend)
 
     # If msys2, copy dynamic libraries to executable directory, visual studio does this automatically.
