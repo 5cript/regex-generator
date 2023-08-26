@@ -36,12 +36,8 @@ const urlFixup = (url) => {
     globalThis.createMonacoEditor = (container) => {
         const editor = monaco.editor.create(container, {
             value: ['function x() {', '\tconsole.log("Hello world!");', '}'].join('\n'),
-            language: 'javascript'
-        });
-
-        editor.layout({
-            width: 800,
-            height: 600
+            language: 'javascript',
+            automaticLayout: true
         });
         return editor;
     };

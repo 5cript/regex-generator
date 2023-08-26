@@ -6,6 +6,8 @@
 @import "./components/topbar.scss";
 @import "./components/main_content.scss";
 
+@import "../../node_modules/monaco-editor/min/vs/editor/editor.main.css";
+
 body {
   background-color: $body-bg;
   padding: 0px;

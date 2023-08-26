@@ -36,7 +36,7 @@ namespace RegexGenerator
         // clang-format off
         return div{id = "MainContent"}(
             div{id = "EditorFrame", reference.onMaterialize([](Nui::val element){
-                //Nui::makeResizeable(element, Nui::ResizeableEdge::Bottom);
+                Nui::makeResizeable(element, Nui::ResizeableEdge::Bottom);
             })}(
                 stabilize(impl_->editor, div{id = "Editor", reference.onMaterialize([](Nui::val element){
                     Nui::Console::log(Nui::val::global("createMonacoEditor"));
